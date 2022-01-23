@@ -51,7 +51,11 @@
 </select>
         </form>
         <div>
-        <button onclick="selecionarTudo();" type="submit" name="submit" value="submit"> Cadastrar Produto</button>
+        <button type="submit" name="submit" value="submit"> Cadastrar Produto</button>
         </div>
+
+        <a href="/verProdutos" style="background-color:tomato">
+            IR PARA A LISTA
+        </a>
     </body>
 </html>

@@ -32,7 +32,9 @@ class paginaProduto extends Controller
     }
 
     public function verProdutos(Request $request) {
-        $produtosCadastrados = DB::table('produtoembalagem')->get();
+        $produtosCadastrados = DB::table('produtoembalagem')
+        ->join('produto', 'produtoembalagem.Produto_idProduto', '=', 'produto.id')->get();
+        
     return view(('listaProduto'), (compact(
         'produtosCadastrados')));
     }
